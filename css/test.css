@@ -1,0 +1,103 @@
+:root {
+    --bg-color:#ffffff;
+    --inset:#ffffff;
+    --nm: 6px 6px 16px 0 rgba(0, 0, 0, 0.2),
+    -6px -6px 16px 0 rgba(255, 255, 255, 1);
+    --nm-inset:inset 4px 4px 8px 0 rgba(0, 0, 0, 0.2),
+    inset -4px -4px 8px 0 rgba(255, 255, 255, 0.8);
+    --color-shadow: #BABECC;
+    --color-white: #FFF;
+
+}
+
+body {
+    margin-bottom:30%;
+    padding:0;
+    min-height:100vh;
+    box-sizing:border-box;
+    display:grid;
+    place-content:center;
+    font-family: 'Poppins',sans-serif;
+    background-color: #e0e5eb;
+  }
+
+  /* button */
+
+  #button_big {
+    background-image: url(../picture/climb.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size:27px;
+    text-align: center;
+    height: 550px;
+    width: 950px;
+    font-family: 'Poppins',sans-serif;
+    cursor:pointer;
+    padding:15px 30px;
+    border:none;
+    border-radius:2%;
+    background-color: #e0e5eb;
+    color:var(--accent-color);
+    box-shadow: var(--nm);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  #button_big:hover {
+    box-shadow:  -20px 60px #bec3c8, 
+             20px 20px 60px #ffffff;
+  }
+
+  /* Moto */
+
+  #paramot{
+    transform: rotate(-20deg);
+    height: 50%;
+    width: 50%;
+    position: relative;
+  }
+
+
+
+  #roue1{
+
+    height: 30%;
+    width: 30%;
+    right: 20%;
+    margin-bottom: 13%;
+    position: relative;
+  }
+#roue1:hover{
+  transform: rotate(700deg);
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+
+
+  #roue2{
+    height: 30%;
+    width: 30%;
+    margin-right: 60%;
+    margin-top: -39%;
+    top: -10%;
+    position: relative;
+  }
+  #roue2:hover{
+    transform: rotate(720deg);
+    -webkit-filter: grayscale(0) blur(0px);
+    filter: grayscale(0) blur(0px);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+
+
+  .test{
+    transform: rotate(-20deg);
+    position: relative;
+    height: 80%;
+    width: 80%;
+    margin-left: 60px;
+  }

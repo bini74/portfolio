@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Page de test de modules</title>
+  <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.6.1/dist/simpleParallax.min.js"></script>
+
+                <button id="button_big">
+                        <img class="test" alt="image" src="picture/image1.png" id="paramot"/>  
+                        <img src="picture/image0.png" id="roue1" /> 
+                        <img src="picture/image0.png" id="roue2"/>
+                </button>
+
+
+
+
+    <script>
+        var images = document.querySelectorAll('.test');
+        new simpleParallax(images, {
+        delay: 0,
+        orientation: 'right',
+        scale: 3,
+        overflow: true,
+    });
+    </script>
+
+
+</body>
+</html>

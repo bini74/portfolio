@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang = "fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width" />
+
+        <!-- Mail -->
+            <button value="Cliquer pour un beep" onclick="JouerSon()" id="custom-prompt-box-button">Mail</button>
+        
+        <span><u>Welcome</u></span>
+
+        <p> Welecome to my portfolio. You will see my passions as well as my experience. Good viewing ! !</p>
+    
+
+        <!--Boutton central-->
+        <button id="button_big" value="Cliquer pour un beep" onclick="JouerSon()"><b><a href="fullpage.html">Start</a></b></button>
+        <audio autoplay="false" id="beep" src="audio/clic.mp3" />
+
+<!---------------   Script ------------->
+
+<!-- FullPage -->
+
+<script src="script/clic.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+
+    new fullpage('#fullpage', {
+        navigation: true,
+        responsiveWidth: 700,
+        anchors: ['home', 'about-us', 'contact'],
+        parallax: true,
+        onLeave: function(origin, destination, direction){
+            console.log("Leaving section" + origin.index);
+        },
+    });
+        </script>
+
+
+<!-- Pop-up -->
+
+<script>
+    let btn = document.getElementById('custom-prompt-box-button');
+
+    btn.onclick = function() {
+        swal({
+            title: "Credit",
+            text: "This site was been created by Julien Bonzi with the help of his friend : Google. If you want to contact me, click on Ok otherwise you can cancel.",
+            icon: "info",
+            buttons: true,
+        })
+        .then((ok) => {
+                if(ok) {
+                    swal("My email adress is : julienbonzi@icloud.com", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("You don't want to send me an email ;)");
+                }
+            });
+
+
+    }
+
+</script>
+
+</body>
+</html>
